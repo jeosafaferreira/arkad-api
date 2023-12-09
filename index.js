@@ -5,6 +5,7 @@ const app = express();
 const port = 8081;
 const usuariosController = require("./controllers/UsuariosController");
 const cartoesController = require("./controllers/CartoesController");
+const transacoesController = require("./controllers/TransacoesController");
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -24,6 +25,10 @@ app.post("/cartoes/cadastrar", cartoesController.cadastrar);
 
 //Usuários
 app.post("/login", usuariosController.login);
+
+//Movimentações
+app.get("/transacoes/:usuario_id", transacoesController.list);
+app.post("/transacoes", transacoesController.cadastrar);
 
 app.listen(port, () => {
   console.log(`App running on port ${port}.`);
