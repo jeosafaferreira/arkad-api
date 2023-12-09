@@ -38,7 +38,7 @@ const cadastrar = (req, res) => {
         '${usuario_id}'
       );`,
     (error, results) => {
-      if (error) throw error;
+      if (error) console.log(error);
       res.status(200).json(results.rows);
     }
   );

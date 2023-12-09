@@ -5,7 +5,7 @@ const login = (req, res) => {
   pool.query(
     `SELECT usuario_id, nome, (CASE WHEN count(*)>0 THEN TRUE ELSE FALSE END) as authorized FROM public.usuarios WHERE email = '${email}' AND senha = '${senha}' GROUP BY usuario_id, nome;`,
     (error, results) => {
-      if (error) throw error;
+      if (error) console.log(error);
       res.status(200).json(results.rows[0]);
     }
   );

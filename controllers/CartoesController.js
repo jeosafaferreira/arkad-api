@@ -5,7 +5,7 @@ const list = (req, res) => {
   pool.query(
     `SELECT * FROM public.cartoes WHERE usuario_id='${usuario_id}';`,
     (error, results) => {
-      if (error) throw error;
+      if (error) console.log(error);
       res.status(200).json(results.rows);
     }
   );
