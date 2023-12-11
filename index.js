@@ -21,7 +21,7 @@ app.get("/", (request, response) => {
 
 //Cartões
 app.get("/cartoes/:usuario_id", cartoesController.list);
-app.post("/cartoes/cadastrar", cartoesController.cadastrar);
+app.post("/cartoes/", cartoesController.cadastrar);
 
 //Usuários
 app.post("/login", usuariosController.login);
