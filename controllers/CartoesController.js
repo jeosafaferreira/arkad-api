@@ -12,10 +12,10 @@ const list = (req, res) => {
 };
 
 const cadastrar = (req, res) => {
-  const nome_impresso = req.body.nome_impresso;
-  const numero = req.body.numero;
-  const bandeira = req.body.bandeira;
-  const vencimento = req.body.vencimento;
+  const number = req.body.number;
+  const expiry = req.body.expiry;
+  const cvc = req.body.cvc;
+  const name = req.body.name;
   const usuario_id = req.body.usuario_id;
 
   pool.query(
@@ -23,19 +23,19 @@ const cadastrar = (req, res) => {
         INTO
         public.cartoes
       (
-        numero,
-        bandeira,
-        vencimento,
-        usuario_id,
-        nome_impresso
+        number,
+        expiry,
+        cvc,
+        name,
+        usuario_id
       )
       VALUES
       (
-        '${numero}',
-        '${bandeira}',
-        '${vencimento}',
-        '${usuario_id}',
-        '${nome_impresso}'
+        '${number}',
+        '${expiry}',
+        '${cvc}',
+        '${name}',
+        '${usuario_id}'
       );`,
     (error, results) => {
       if (error) throw error;
