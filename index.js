@@ -38,6 +38,7 @@ app.post("/email", emailController.enviarEmail);
 
 //Artigos
 app.get("/artigos", artigosController.list);
+app.post("/artigos", artigosController.create);
 
 app.listen(port, () => {
     console.log(`App running on port ${port}.`);
