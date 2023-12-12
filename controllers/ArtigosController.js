@@ -12,7 +12,7 @@ const create = (req, res) => {
             VALUES
             (
                 '${req.body.titulo}',
-                '${req.body.texto}',
+                '${req.body.texto}'
             );`,
         (error, results) => {
             if (error) {
