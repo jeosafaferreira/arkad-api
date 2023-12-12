@@ -11,13 +11,13 @@ const emailController = require("./controllers/EmailController");
 app.use(cors());
 app.use(bodyParser.json());
 app.use(
-  bodyParser.urlencoded({
-    extended: true,
-  })
+    bodyParser.urlencoded({
+        extended: true,
+    })
 );
 
 app.get("/", (request, response) => {
-  response.json({ info: "Arkad - Node.js, Express, and Postgres API" });
+    response.json({ info: "Arkad - Node.js, Express, and Postgres API" });
 });
 
 //Cartões
@@ -36,5 +36,5 @@ app.post("/transacoes", transacoesController.cadastrar);
 app.post("/email", emailController.enviarEmail);
 
 app.listen(port, () => {
-  console.log(`App running on port ${port}.`);
+    console.log(`App running on port ${port}.`);
 });
