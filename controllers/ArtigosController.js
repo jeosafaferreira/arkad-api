@@ -7,14 +7,12 @@ const create = (req, res) => {
             public.artigos
             (
                 titulo,
-                texto,
-                resumo
+                texto
             )
             VALUES
             (
                 '${req.body.titulo}',
                 '${req.body.texto}',
-                '${req.body.resumo}'
             );`,
         (error, results) => {
             if (error) {
