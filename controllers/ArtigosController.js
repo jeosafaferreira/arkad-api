@@ -12,9 +12,9 @@ const create = (req, res) => {
             )
             VALUES
             (
-                ${req.body.titulo},
-                ${req.body.texto},
-                ${req.body.resumo}
+                '${req.body.titulo}',
+                '${req.body.texto}',
+                '${req.body.resumo}'
             );`,
         (error, results) => {
             if (error) console.log(error);
