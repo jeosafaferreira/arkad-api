@@ -57,7 +57,7 @@ const deletar = (req, res) => {
         console.error;
         res.status(500).json(error);
       } else {
-        res.status(200).json(results.rows);
+        res.status(200).json(`Cartão ${cartao_id} deletado com sucesso.`);
       }
     }
   );
