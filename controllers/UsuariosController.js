@@ -44,4 +44,5 @@ const create = (req, res) => {
 
 module.exports = {
     login,
+    create,
 };

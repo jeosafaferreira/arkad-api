@@ -28,6 +28,7 @@ app.delete("/cartoes/:cartao_id", cartoesController.deletar);
 
 //Usuários
 app.post("/login", usuariosController.login);
+app.post("/usuarios", usuariosController.create);
 
 //Movimentações
 app.get("/transacoes/:usuario_id", transacoesController.list);
