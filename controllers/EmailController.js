@@ -4,7 +4,7 @@ const enviarEmail = (req, res) => {
             Olá!<br/><br/>
             Uma nova mensagem foi enviada pelo formulário de suporte do sistema <b>Arkad</b>.
             <br/><br/>
-            Data: ${new Date()}
+            Data: ${new Date().getDate()}/${new Date().getMonth()}/${new Date().getFullYear()} - ${new Date().getHours()}:${new Date().getMinutes()}
             <b>Nome completo: </b> ${req.body.nome}<br/>
             <b>E-mail:</b> ${req.body.email}<br/>
             <b>Telefone:</b> ${req.body.telefone}<br/>
