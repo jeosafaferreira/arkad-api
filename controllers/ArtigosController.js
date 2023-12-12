@@ -17,8 +17,12 @@ const create = (req, res) => {
                 '${req.body.resumo}'
             );`,
         (error, results) => {
-            if (error) console.log(error);
-            res.status(200).json(results.rows);
+            if (error) {
+                res.status(500).json("Erro ao cadastrar artigo.");
+                console.log(error);
+            } else {
+                res.status(200).json(results.rows);
+            }
         }
     );
 };
