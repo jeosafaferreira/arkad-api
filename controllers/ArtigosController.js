@@ -7,6 +7,6 @@ const list = (req, res) => {
     });
 };
 
-module.exports{
-    list
-}
+module.exports = {
+    list,
+};
