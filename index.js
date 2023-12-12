@@ -22,6 +22,7 @@ app.get("/", (request, response) => {
 //Cartões
 app.get("/cartoes/:usuario_id", cartoesController.list);
 app.post("/cartoes/", cartoesController.cadastrar);
+app.delete("/cartoes/:cartao_id", cartoesController.deletar);
 
 //Usuários
 app.post("/login", usuariosController.login);

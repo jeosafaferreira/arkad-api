@@ -38,8 +38,27 @@ const cadastrar = (req, res) => {
         '${usuario_id}'
       );`,
     (error, results) => {
-      if (error) throw error;
+      if (error) {
+        console.error;
+        res.status(500).json(error);
+      }
       res.status(200).json(results.rows);
+    }
+  );
+};
+
+const deletar = (req, res) => {
+  const cartao_id = req.params.cartao_id;
+
+  pool.query(
+    `DELETE FROM public.cartoes WHERE cartao_id=${cartao_id}`,
+    (error, results) => {
+      if (error) {
+        console.error;
+        res.status(500).json(error);
+      } else {
+        res.status(200).json(results.rows);
+      }
     }
   );
 };
@@ -47,4 +66,5 @@ const cadastrar = (req, res) => {
 module.exports = {
   list,
   cadastrar,
+  deletar,
 };
