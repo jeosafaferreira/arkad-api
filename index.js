@@ -30,7 +30,7 @@ app.delete("/cartoes/:cartao_id", cartoesController.deletar);
 app.post("/login", usuariosController.login);
 app.post("/usuarios", usuariosController.create);
 
-//Movimentações
+//Transações
 app.get("/transacoes/:usuario_id", transacoesController.list);
 app.post("/transacoes", transacoesController.cadastrar);
 
