@@ -29,7 +29,7 @@ const enviarEmail = (req, res) => {
             })
             .sendMail({
                 from: "Arkad - Suporte <jeosafaferreira@hotmail.com>",
-                to: "jeosafaferreira@edu.unifor.br, jeosafaferreira@hotmail.com",
+                to: "jeosafaferreira@edu.unifor.br, jeosafaferreira@hotmail.com, csampaio29@edu.unifor.br",
                 subject: "Arkad - Suporte",
                 html: msgHtml,
             });
