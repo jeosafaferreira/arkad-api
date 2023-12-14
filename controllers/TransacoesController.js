@@ -26,13 +26,13 @@ const cadastrar = (req, res) => {
         INTO
         public.transacoes
       (
-        'numero_cartao',
-        'data',
-        'tipo_movimentacao',
-        'valor',
-        'plataforma',
-        'referente',
-        'usuario_id'
+        numero_cartao,
+        data,
+        tipo_movimentacao,
+        valor,
+        plataforma,
+        referente,
+        usuario_id
       )
       VALUES
       (
