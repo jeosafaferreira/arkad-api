@@ -49,7 +49,7 @@ const cadastrar = (req, res) => {
                 res.status(500).json("Erro ao consultar transações.");
                 console.log(error);
             } else {
-                res.status(200).json(results.rows);
+                res.status(200).json("Transação cadastrada com sucesso!");
             }
         }
     );
