@@ -20,8 +20,8 @@ const enviarEmail = (req, res) => {
                 secure: true,
                 service: "Outlook365",
                 auth: {
-                    user: "jeosafaferreira@hotmail.com",
-                    pass: "34848998J",
+                    user: "",
+                    pass: "",
                 },
                 tls: {
                     ciphers: "SSLv3",
